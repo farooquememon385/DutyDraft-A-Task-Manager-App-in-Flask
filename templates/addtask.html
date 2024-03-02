@@ -1,0 +1,39 @@
+{% extends 'header.html' %}
+{% block main %}
+
+
+<div class="task-manager-container">
+    <h1>Task Manager</h1>
+    <table>
+      <tr class='heading-row'>
+        <th>Task</th>
+        <th>Due Date</th>
+        <th>Action</th>
+      </tr>
+      <tr>
+        <td class="input-row">
+            <form  id="form" action = '{{ action }}' method="POST">
+                {{ form.csrf_token}}
+                {{ form.title }}
+                {{ form.dueDate }}
+                {{ form.submit(value=Action) }}
+            </form>
+        </td>
+      </tr>
+      {% for task in tasks %}
+        <tr key= '{{ tasks.id }}' class="task-item">
+          <td>
+            <strong>{{ task.title }}</strong>
+          </td>
+          <td>
+            {{ task.dueDate }}
+          </td>
+          <td>
+            <a href="{{ url_for('editTask', task_id = task.id) }}">Edit</a>
+            <a >Delete</button>
+          </td>
+        </tr>
+        {% endfor %}
+    </table>
+  </div>
+{% endblock %}

@@ -1,0 +1,81 @@
+.task-manager-container {
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .task-manager-container h1{
+    color: blue;
+    margin: auto;
+  }
+  
+  table{
+    width: 90%;
+    margin: auto;
+    background-color: darkgrey;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  table tr{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  table tr td{
+    width: 98%;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 1%;
+  }
+  
+  tr th{
+    width: 33%;
+    color: blue;
+    padding: 4px;
+    background-color: greenyellow;
+  }
+  
+  .input-row{
+    width: 100%;
+    margin: 0;
+    padding-bottom: 1%;
+    border-bottom: 3px solid blue;
+  }
+
+  #form{
+    width: 100%;
+    display: flex;
+  }
+  
+  #form input{
+    width: 100%;
+    margin: 1%;
+  }
+
+  button, input[type="button"], input[type="submit"]{
+    width: 96%;
+    margin: 1%;
+    padding: 1%;
+    color: white;
+    background-color: blue;
+    outline: none;
+    border: 2px solid  blue;
+    border-radius: 2%;
+    cursor: pointer;
+  
+  }
+  
+  button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+    color: blue;
+    background-color: white;
+  }
+  
+  
