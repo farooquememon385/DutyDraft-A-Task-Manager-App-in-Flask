@@ -37,10 +37,22 @@ def editTask(task_id):
             db.session.commit()
             flash(task.title+' has been updated')
             return redirect('/tasks')
+        else:
+            flash(task.title+' has been updated')
         form.title.data = task.title
         form.dueDate.data = task.dueDate
         tasks = Task.query.all()
         return render_template('addtask.html', 
         form=form, tasks=tasks, Action='Update Task',
         action = f'/edit/{task_id}')
+    return redirect(url_for('getTask'))
+
+@app.route('/delete/<int:task_id>')
+def deleteTask(task_id):
+    task = Task.query.get(task_id)
+    if task:
+        db.session.delete(task)
+        db.session.commit() 
+        flash(task.title+' deleted successfully')
+        return redirect('/tasks')
     return redirect(url_for('getTask'))

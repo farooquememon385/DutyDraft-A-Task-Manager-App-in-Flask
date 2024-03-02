@@ -30,7 +30,7 @@
           </td>
           <td>
             <a href="{{ url_for('editTask', task_id = task.id) }}">Edit</a>
-            <a >Delete</button>
+            <a href="{{ url_for('deleteTask', task_id = task.id) }}">Delete</a>
           </td>
         </tr>
         {% endfor %}
