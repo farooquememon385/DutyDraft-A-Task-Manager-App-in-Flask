@@ -29,8 +29,8 @@
             {{ task.dueDate }}
           </td>
           <td>
-            <a href="{{ url_for('editTask', task_id = task.id) }}">Edit</a>
-            <a href="{{ url_for('deleteTask', task_id = task.id) }}">Delete</a>
+            <a class="edit" href="{{ url_for('editTask', task_id = task.id) }}">Edit</a>
+            <a class="delete" href="{{ url_for('deleteTask', task_id = task.id) }}">Delete</a>
           </td>
         </tr>
         {% endfor %}

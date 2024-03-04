@@ -1,7 +1,7 @@
 .task-manager-container {
     max-width: 100%;
     margin: 0 auto;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,7 +61,7 @@
   }
 
   button, input[type="button"], input[type="submit"]{
-    width: 96%;
+    width: 95%;
     margin: 1%;
     padding: 1%;
     color: white;
@@ -78,4 +78,23 @@
     background-color: white;
   }
   
+  .edit, .delete{
+    color: white;
+    background-color: green;
+    text-decoration: none;
+    width: 96%;
+    margin: 1%;
+    padding: 1%;
+    border: 1px solid  blue;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
   
+  .delete{
+    background-color: orangered;
+  }
+
+.edit:hover, .delete:hover{
+  color: blue;
+  background-color: white;
+}
