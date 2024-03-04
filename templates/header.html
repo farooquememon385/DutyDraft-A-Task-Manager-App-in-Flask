@@ -7,11 +7,6 @@
     <link rel="stylesheet" type="text/css" href="/static/style.css">     
 </head>
 <body>
-        <ul>
-            <li><a href="{{ url_for('getTask') }}">Home</a></li>
-            <!-- <li><a href="{{ url_for('addTask') }}">Tasks</a></li> -->
-        </ul>
-        <hr>
         <br>
         <div style="height: 40px;">
         {% with messages = get_flashed_messages() %}

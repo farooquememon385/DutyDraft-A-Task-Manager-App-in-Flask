@@ -10,7 +10,7 @@
         <th>Due Date</th>
         <th>Action</th>
       </tr>
-      <tr>
+      <tr class="form-row">
         <td class="input-row">
             <form  id="form" action = '{{ action }}' method="POST">
                 {{ form.csrf_token}}
@@ -28,7 +28,7 @@
           <td>
             {{ task.dueDate }}
           </td>
-          <td>
+          <td class="buttons">
             <a class="edit" href="{{ url_for('editTask', task_id = task.id) }}">Edit</a>
             <a class="delete" href="{{ url_for('deleteTask', task_id = task.id) }}">Delete</a>
           </td>

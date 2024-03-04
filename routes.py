@@ -5,7 +5,6 @@ import forms
 
 @app.route('/')
 @app.route('/index')
-
 @app.route('/tasks')
 def getTask():
     form = forms.AddTaskForm()
