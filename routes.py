@@ -37,8 +37,6 @@ def editTask(task_id):
             db.session.commit()
             flash(task.title+' has been updated')
             return redirect('/tasks')
-        else:
-            flash(task.title+' has been updated')
         form.title.data = task.title
         form.dueDate.data = task.dueDate
         tasks = Task.query.all()

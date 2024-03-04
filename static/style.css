@@ -98,3 +98,13 @@
   color: blue;
   background-color: white;
 }
+
+.flash-message{
+  background-color: rgba(64, 255, 0, 0.7);
+  width: 80%;
+  padding: 10px;
+  color: blue;
+  margin: auto;
+  text-align: center;
+  border-radius: 10px;
+}

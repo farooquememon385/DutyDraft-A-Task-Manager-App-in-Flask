@@ -13,19 +13,30 @@
         </ul>
         <hr>
         <br>
+        <div style="height: 40px;">
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
-                <div>
+                <div class="flash-message">
                     {{ message }}
                 </div>
                 {% endfor %}
             {% endif %}
         {% endwith %}
+        </div>
         <br>
-</body>
-</html>
 
 {% block main %}
 
 {% endblock %}
+
+<script>
+    let flash_messages = document.getElementsByClassName('flash-message');
+    console.log(flash_messages[0])
+    setTimeout(()=>{
+        flash_messages[0].style.display = "none";
+    },2000)
+
+</script>
+</body>
+</html>
